@@ -1,0 +1,48 @@
+   /* ===== Estilos Básicos ===== */
+      body {
+        background-color: #f5f5f5; /* Fondo */
+        color: #333; /* Color del texto */
+        font-family: Arial, Helvetica, sans-serif; /* Fuente */
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h1,
+      h2 {
+        color: #005f99; /* Color de títulos */
+      }
+
+      .contenedor {
+        background-color: #ffffff;
+        padding: 20px; /* Espaciado interno */
+        border-radius: 8px;
+        max-width: 600px;
+        margin: 0 auto; /* Centrar */
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .mi-lista {
+          color: yellowgreen;
+      }
+
+      .flex-box {
+        display: flex;
+      }
+
+      .linea {
+        border: 2px solid red;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 15px; /* Espaciado entre párrafos */
+      }
+
+      ul {
+        margin-left: 20px;
+        padding: 10px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
