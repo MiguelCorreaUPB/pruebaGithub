@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Paisajes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#">Paisajes</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger" aria-hidden="true"></span>
+                <span class="visually-hidden">Abrir menú</span>
+            </button>
+
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <h1>Paisajes elegantes</h1>
+                <p>Hola</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#">Comenzar</a>
+                    <a class="btn ghost" href="#">Ver galería</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features container">
+            <article class="feature">
+                <h2>Hola</h2>
+                <p>La naturaleza es vida</p>
+            </article>
+            <article class="feature">
+                <h2>Hola</h2>
+                <p>Los arboles son verdes</p>
+            </article>
+            <article class="feature">
+                <h2>Hola</h2>
+                <p>El cielo es azul</p>
+            </article>
+        </section>
+
+        <section class="gallery container" aria-label="Galería de imágenes">
+            <h2 class="section-title">Galería</h2>
+            <div class="gallery-grid">
+                <figure class="gallery-item"><img src="images/img1.jpg" alt="Imagen 1">
+                    <figcaption>Imagen 1</figcaption>
+                </figure>
+                <figure class="gallery-item"><img src="images/img2.jpg" alt="Imagen 2">
+                    <figcaption>Imagen 2</figcaption>
+                </figure>
+                <figure class="gallery-item"><img src="images/img3.jpg" alt="Imagen 3">
+                    <figcaption>Imagen 3</figcaption>
+                </figure>
+                <figure class="gallery-item"><img src="images/img4.jpg" alt="Imagen 4">
+                    <figcaption>Imagen 4</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="info container">
+            <div class="info-left">
+                <h2>Vive la experiencia</h2>
+                <p>Hola</p>
+            </div>
+            <aside class="info-right">
+                <h3>Contacto</h3>
+                <p>Correo: miguel.correac@upb.edu.co</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Miguel</p>
+            <nav class="footer-nav">
+                <a href="#">Aviso</a> • <a href="#">Privacidad</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- este script sirve para que se actualice solo el año y que se pueda abrir el menú cuando la pantalla es pequeña -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !expanded);
+            mainNav.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
